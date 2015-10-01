@@ -12,5 +12,7 @@
     <orderEntry type="library" name="commons-lang3-3.4" level="project" />
     <orderEntry type="library" name="guava-18.0" level="project" />
     <orderEntry type="library" name="json-20140107" level="project" />
+    <orderEntry type="library" name="sqlite4java" level="project" />
+    <orderEntry type="library" name="sqlite-jdbc-3.8.11.1" level="project" />
   </component>
 </module>

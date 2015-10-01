@@ -78,3 +78,19 @@ public fun List<CompressedWord>.toJson(): JSONArray {
     this.forEach { json.put(it.toJson()) }
     return json
 }
+public fun List<CompressedWord>.removeUpperCase(): List<CompressedWord> {
+    val ret = this.filter { it.name.equals(it.name.toLowerCase()) }
+    println("removeUppercase: ${this.size()} -> ${ret.size()}")
+    return ret
+}
+public fun List<CompressedWord>.removeFirstCharNotRoman(): List<CompressedWord> {
+    val ret = this.filter {it.name.first().toInt().twixt(97, 122)}
+    println("removeFirstCharNotRoman: ${this.size()} -> ${ret.size()}")
+    return ret
+}
+public fun Char.twixt(start: Char, end: Char): Boolean {
+    return this.toInt() >= start.toInt() && this.toInt() <= end.toInt()
+}
+public fun Int.twixt(start: Int, end: Int): Boolean {
+    return this >= start && this <= end
+}
